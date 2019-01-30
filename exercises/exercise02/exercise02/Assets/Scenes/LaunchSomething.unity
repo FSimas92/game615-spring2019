@@ -343,8 +343,8 @@ GameObject:
   - component: {fileID: 34389991}
   - component: {fileID: 34389990}
   - component: {fileID: 34389994}
-  - component: {fileID: 34389995}
   - component: {fileID: 34389989}
+  - component: {fileID: 34389995}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57622955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59, y: -4.954236, z: 6.9053144}
+  m_LocalPosition: {x: -0.9, y: -4.954236, z: 5.12}
   m_LocalScale: {x: 2.8386, y: 2.8386, z: 2.8386}
   m_Children: []
   m_Father: {fileID: 0}
@@ -586,7 +586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105691958}
   m_LocalRotation: {x: -0, y: 0.7116284, z: -0.7025562, w: 0}
-  m_LocalPosition: {x: -0.87, y: -3.56, z: -8.54}
+  m_LocalPosition: {x: -0.87, y: -3.56, z: -8.39}
   m_LocalScale: {x: 14.27908, y: 2.3584654, z: 0.15648}
   m_Children: []
   m_Father: {fileID: 1074302311}
@@ -1211,7 +1211,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.50387144, g: 0.6320754, b: 0.5112315, a: 0}
+  m_BackGroundColor: {r: 0.14297794, g: 0.254717, b: 0.14297794, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1250,8 +1250,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254372764}
-  m_LocalRotation: {x: 0.009190218, y: -0.9213043, z: 0.38812035, w: 0.021832345}
-  m_LocalPosition: {x: 2.0714822, y: 9.372684, z: 15.600848}
+  m_LocalRotation: {x: 0.00060089846, y: -0.9741821, z: 0.22574762, w: 0.002622324}
+  m_LocalPosition: {x: -2.1050248, y: 6.3358364, z: 20.147688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2912,6 +2912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1032076203}
+  - component: {fileID: 1032076204}
   m_Layer: 0
   m_Name: CheerBots
   m_TagString: Untagged
@@ -2937,6 +2938,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032076204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032076202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c5f314599ffbd4f88ed5352e7a3ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043306010
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043306010}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: -75.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

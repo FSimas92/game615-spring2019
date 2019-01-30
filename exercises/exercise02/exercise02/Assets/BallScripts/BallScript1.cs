@@ -19,6 +19,7 @@ public class BallScript1 : MonoBehaviour
 
         if (other.gameObject.name == "InvisibleTriggerCube1")
         {
+            Debug.Log("Contact was made!");
             Rigidbody rb = gameObject.GetComponent<Rigidbody>();
             rb.useGravity = true;
         }

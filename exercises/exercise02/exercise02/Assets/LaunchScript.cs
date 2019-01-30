@@ -15,9 +15,6 @@ public class LaunchScript : MonoBehaviour {
 	Vector3 startPosition;
 	Quaternion startRotation;
 
-	//We will set this to true in the OnTriggerEnter function if the gameObject
-	//goes through the ring.
-	bool playerWon = false;
 
 	// Use this for initialization
 	void Start () {
@@ -66,11 +63,6 @@ public class LaunchScript : MonoBehaviour {
 	//	3. Any Component with an "OnTriggerEnter" function will have their function called
 	void OnTriggerEnter(Collider other)
 	{
-		//Check to see if the trigger we collided with is the "InvisibleTriggerCube"
-		//that is in the middle of the Ring gameObject.
-		if (other.gameObject.name == "InvisibleTriggerCube") {
-			playerWon = true;//In OnGUI we will print you win when this is set to true
-		}
 
 		if (other.gameObject.name == "InvisibleRespawnCube") {
 			//If we collide with the big invisible cube at the bottom of the scene
@@ -95,8 +87,6 @@ public class LaunchScript : MonoBehaviour {
 	{
 		GUI.Label(new Rect(50, 50, 200, 200), launchForce.ToString());
 
-		if (playerWon) {
-			GUI.Label(new Rect(250, 250, 200, 200), "You win!");
-		}
+
 	}
 }

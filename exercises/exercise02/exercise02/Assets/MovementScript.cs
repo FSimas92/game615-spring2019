@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RingScript : MonoBehaviour
+public class MovementScript : MonoBehaviour
 {
 	//This is how long the ring will move in each direction
 	float moveRate = 3;
@@ -52,6 +52,7 @@ public class RingScript : MonoBehaviour
         {
             moveRate = 3;
             moveSpeed = 0.05f;
+            moveTimer = moveRate / 2;
         }
     }
 }
