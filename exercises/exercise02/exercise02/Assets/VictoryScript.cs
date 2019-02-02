@@ -6,6 +6,7 @@ public class VictoryScript : MonoBehaviour
 {
 
     bool playerWon = false;
+    public object Body;
 
 
     // Start is called before the first frame update
@@ -23,8 +24,9 @@ public class VictoryScript : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.name == "InvisibleTriggerCube5")
+        if (other.gameObject.name == "Body") 
         {
+            Debug.Log("you won");
             playerWon = true;
         }
 

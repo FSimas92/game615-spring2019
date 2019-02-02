@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BallScript1 : MonoBehaviour
 {
+    public Material BallMaterial2;
+
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -12,14 +15,14 @@ public class BallScript1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        }
+    }   
 
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.name == "InvisibleTriggerCube1")
+        if (other.gameObject.name == "Bullet")
         {
-            Debug.Log("Contact was made!");
+            transform.GetComponent<Renderer>().material = BallMaterial2;
             Rigidbody rb = gameObject.GetComponent<Rigidbody>();
             rb.useGravity = true;
         }
