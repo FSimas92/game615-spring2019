@@ -50,7 +50,7 @@ public class PlanePilot : MonoBehaviour
     {
         if (other.gameObject.CompareTag("RingTrigger"))
         {
-            GameObject effect = Instantiate(StarEffectPrefab, gameObject.transform.position, Quaternion.identity);
+            GameObject effect = Instantiate(StarEffectPrefab, gameObject.transform.position + gameObject.transform.forward * speed, Quaternion.identity);
             Destroy(effect, 5);
         }
     }
