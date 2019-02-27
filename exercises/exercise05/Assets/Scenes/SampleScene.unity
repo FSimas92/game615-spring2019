@@ -1706,8 +1706,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
-  rollSpeed: 40
-  pitchSpeed: 35
+  rollSpeed: 50
+  pitchSpeed: 40
   StarEffectPrefab: {fileID: 4174254661661164469, guid: 1e58e89bd50df37489956134ad37f27e,
     type: 3}
 --- !u!4 &1504404877
