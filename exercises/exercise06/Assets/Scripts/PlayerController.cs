@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     float gravityModifier = 0.2f;
 
-    float yVelocity = 0;
+    public float yVelocity = 0;
     bool previousIsGroundedValue;
 
     CharacterController cc;
