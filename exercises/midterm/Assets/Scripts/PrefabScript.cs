@@ -5,12 +5,12 @@ using UnityEngine;
 public class PrefabScript : MonoBehaviour
 {
     public GameObject prefab;
-    public float Timer = 3;
+    public float Timer = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

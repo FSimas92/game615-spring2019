@@ -14,12 +14,18 @@ public class PlayerScript2 : MonoBehaviour
 
     CharacterController cc;
 
+    public AudioClip levelSong;
+    public AudioSource songsource;
+
     // Start is called before the first frame update
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>();
 
         previousIsGroundedValue = cc.isGrounded;
+
+        songsource.clip = levelSong;
+        songsource.Play();
     }
 
     // Update is called once per frame

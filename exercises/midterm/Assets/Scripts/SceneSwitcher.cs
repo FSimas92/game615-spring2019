@@ -21,4 +21,8 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void Level3Switcher()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

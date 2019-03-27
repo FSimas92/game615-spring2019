@@ -8,30 +8,28 @@ public class GridPrefabScript : MonoBehaviour
     public GameObject prefab;
     public int numberOfObjects = 20;
     public float radius = 60f;
-    public Image timer;
+
+    float spawnTimer;
+    public float spawnRate = 4;
 
     void Start()
     {
         CircleGrid();
+
+        spawnRate = 4;
+        spawnTimer = spawnRate;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer.fillAmount == 0.75f)
-        {
-            CircleGrid();
-        }
+        spawnTimer = spawnTimer - Time.deltaTime;
+        if (spawnTimer < 0)
+            {
+                spawnTimer = spawnRate;
 
-        if (timer.fillAmount == 0.5f)
-        {
-            CircleGrid();
-        }
-
-        if (timer.fillAmount == 0.25f)
-        {
-            CircleGrid();
-        }
+                CircleGrid();
+            }
     }
 
     void CircleGrid()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,8 +14,14 @@ public class GoalScript : MonoBehaviour
     public Button replayButton;
     public Button mainmenuButton;
 
+    public GameObject ButtonGroup;
+    public GameObject instantiator;
+
     private int lives;
-    float timeLeft = 30.0f;
+    public float timeLeft;
+
+    public AudioClip failclip;
+    public AudioSource failsource;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +32,9 @@ public class GoalScript : MonoBehaviour
 
         victoryText.text = "";
 
-        replayButton.interactable = false;
-        mainmenuButton.interactable = false;
+        ButtonGroup.SetActive(false);
+
+        failsource.clip = failclip;
     }
 
     // Update is called once per frame
@@ -36,8 +44,13 @@ public class GoalScript : MonoBehaviour
         if (timer.fillAmount <= 0)
         {
             victoryText.text = "YOU WIN";
-            replayButton.interactable = true;
-            mainmenuButton.interactable = true;
+            ButtonGroup.SetActive(true);
+            lossText.enabled = false;
+            instantiator.SetActive(false);
+
+            GameObject[] bombs = GameObject.FindGameObjectsWithTag("bomb");
+            foreach (GameObject bomb in bombs)
+                GameObject.Destroy(bomb);
         }
     }
 
@@ -48,6 +61,7 @@ public class GoalScript : MonoBehaviour
             Destroy(other.gameObject);
             lives = lives - 1;
             SetLivesText();
+            failsource.Play();
         }
     }
 
@@ -56,9 +70,12 @@ public class GoalScript : MonoBehaviour
         livesText.text = "LIVES: " + lives.ToString();
         if (lives <= 0)
         {
-            lossText.text = "Game Over";
-            replayButton.interactable = true;
-            mainmenuButton.interactable = true;
+            lossText.text = "GAME OVER";
+            ButtonGroup.SetActive(true);
+            victoryText.enabled = false;
+            timer.enabled = false;
+            timer.fillAmount = 100;
+            failsource.enabled = false;
         }
     }
 }
