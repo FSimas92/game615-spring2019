@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Button
+  - Respawn1
+  - Respawn2
+  - Respawn3
+  - GridPlat
   layers:
   - Default
   - TransparentFX
